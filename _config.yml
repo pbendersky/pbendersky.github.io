@@ -35,7 +35,10 @@ code_dir: downloads/code
 category_dir: blog/categories
 markdown: rdiscount
 rdiscount:
-  extensions: [footnotes]
+  extensions:
+    - autolink
+    - footnotes
+    - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index

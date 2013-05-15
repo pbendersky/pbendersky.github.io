@@ -3,7 +3,7 @@ layout: post
 title: "How could Apple extend AirPlay"
 date: 2013-05-08 22:41
 comments: true
-categories: Apple Speculation
+categories: [Apple, Speculation]
 ---
 This is a highly speculative article. I'd like to be able to say it's based on educate guesses, but sadly
 I think it's not. 
