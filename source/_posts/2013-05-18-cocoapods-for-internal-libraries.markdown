@@ -4,6 +4,8 @@ title: "CocoaPods for internal libraries"
 date: 2013-05-18 13:55
 comments: true
 categories: [Cocoa, Development]
+description: "How to use CocoaPods to manage internal / private libraries"
+keywords: "cocoapods, internal libraries, private libraries"
 ---
 [CocoaPods] is a great way to manage dependencies (mostly open source code) in your iOS or OS X project. 
 It implements a [Gemfile] like configuration file (called a [Podfile]) where you declare your dependencies
