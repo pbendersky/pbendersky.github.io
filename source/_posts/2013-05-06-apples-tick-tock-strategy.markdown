@@ -4,6 +4,8 @@ title: "Apple's Tick-Tock Strategy"
 date: 2013-05-06 22:39
 comments: true
 categories: [Apple, iOS]
+description: "A speculation on how Apple applies the tick-tock strategy to both hardware and software"
+keywords: "apple, tick-tock strategy, atp.fm"
 ---
 A lot has been discussed about how Apple products, and in particular the iPhone, seem to be following [Intel's Tick-Tock strategy](http://en.m.wikipedia.org/wiki/Intel_Tick-Tock).  
 Apple appears to be doing the same (or something very close to it) with [OS X](http://arstechnica.com/apple/2012/07/os-x-10-8/23/#x-recommendations) as well.

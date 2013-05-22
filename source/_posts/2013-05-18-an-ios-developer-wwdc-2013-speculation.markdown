@@ -5,6 +5,8 @@ date: 2013-05-20 14:36
 comments: true
 categories: [Apple, Speculation]
 published: true
+description: "A speculation on WWDC 2013 software announcements"
+keywords: "apple, speculation, wwdc 2013"
 ---
 As [WWDC] 2013 closes in, speculation season begins for Apple enthusiasts. In addition to that 2013 has been
 a very quiet year for Apple so far (in terms of events and announcements) and a lot has been written about

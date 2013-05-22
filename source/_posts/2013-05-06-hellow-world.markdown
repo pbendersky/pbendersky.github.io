@@ -4,6 +4,8 @@ title: "Hellow World"
 date: 2013-05-06 22:30
 comments: true
 categories: 
+description: "Welcome to Pablo Bendersky's blog"
+keywords: "hello, introduction"
 ---
 This is the blog I've been intending two start for at least two years now. It took me a lot of courage to
 get started, and it's taking me more time than I expected to put in writing the ideas I have on my mind.

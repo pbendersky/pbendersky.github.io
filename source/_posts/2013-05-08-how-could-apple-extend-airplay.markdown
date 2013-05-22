@@ -4,6 +4,8 @@ title: "How could Apple extend AirPlay"
 date: 2013-05-08 22:41
 comments: true
 categories: [Apple, Speculation]
+description: "A speculation on how Apple could extend Airplay to better use the Apple TV processor"
+keywords: "apple, airplay, speculation"
 ---
 This is a highly speculative article. I'd like to be able to say it's based on educate guesses, but sadly
 I think it's not. 
