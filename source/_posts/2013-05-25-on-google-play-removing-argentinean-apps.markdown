@@ -5,6 +5,13 @@ date: 2013-05-25 23:25
 comments: true
 categories: [Google]
 ---
+Update
+------
+As expected (and hoped) Google ended up not removing apps developed by Argentinean companies or individuals.
+This is the right move, but still, the way the "bad news" were originally communicated leave a lot to be desired.
+
+-----
+
 I woke up this morning to the news that Google Play would no longer accept apps from developers in Argentina
 "Due to ongoing challenges making payments to Argentine developer" (Google's official statement is 
 [here][GoogleStatement]. I saw it first reported on [Celularis] in Spanish, then on [The Verge] in English, 
