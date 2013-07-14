@@ -20,7 +20,7 @@ This path probably wasn't a dead end, and having an even more accurate represent
 
 iOS 7 World
 -----------
-iOS 7 changes all of that. Instead of a representation of _our_ world, it presents users with _its own_ world. A world were overlapping views blur what's behind them, and where things obey the rules of gravity.
+iOS 7 changes all of that. Instead of a representation of _our_ world, it presents users with _its own_ world. A world where overlapping views blur what's behind them, and where things obey the rules of gravity.
 
 It's not trying to imitate _our_ world, but instead is building on new conventions. A futuristic world, where our apps will live in.
 
