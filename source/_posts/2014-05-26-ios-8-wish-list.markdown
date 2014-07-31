@@ -31,7 +31,7 @@ Windows Phone 8 supports a feature called [Kids Corner]. With that feature enabl
 With SpringBoard Folders, I figure Apple could easily implement a feature like this to provide something less strict than Guided Access while guaranteeing your kids do not switch to another app.
 
 ## Some sort of File Management
-Sadly here, I don't see Apple doing any sort of File Manager on iOS. Even more, I think they are moving in the opposite direction with iCloud storage on Mac apps, where each file type is tied to the app that created it. But given that this is my wish list, I fiture it's fine to dream.
+Sadly here, I don't see Apple doing any sort of File Manager on iOS. Even more, I think they are moving in the opposite direction with iCloud storage on Mac apps, where each file type is tied to the app that created it. But given that this is my wish list, I figure it's fine to dream.
 
 The Mac, even when using iCloud storage, provides both tags and an All Files view in the Finder, where you can find apps inside any app's sandbox. iOS could easily do the same without breaking the sandbox. Provide a simple app to browse all your data files, filter by app, name or tag and have the appropriate app open the app.
 
