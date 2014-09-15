@@ -21,5 +21,4 @@ You can contact me at:
 
 - **Quadion Technologies** <http://www.quadiontech.com>
 - **Twitter** [@pbendersky](http://twitter.com/pbendersky)
-- **AppDotNet** [@pbendersky](http://app.net/pbendersky)
 - **Email** pablin ( at ) pablin (dot) org
