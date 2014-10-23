@@ -1,0 +1,26 @@
+---
+layout: post
+title: "16/64/128"
+date: 2014-10-23 10:23:59 -0300
+comments: true
+categories: [Apple]
+description: "On the new pricing tiers for 2014 iOS devices"
+keywords: "apple"
+---
+Ever since announced, iOS devices stuck to a simple formula for storage sizes. You get the base model (8GB, 16GB depending when), and for USD 100 you can upgrade to the next storage tier. Storage tiers had been (up to 2014) twice the size each time, for example 16/32/64. Even if this was not logical to some[^WhyIlogical] it was somehow easy to understand: storage bumps were linear in their multiplier (2x, 2x).
+
+This year, this changed for the worse. Apple is now offering all their new devices (iPhone 6, 6 Plus, iPad Air 2, iPad mini 3) with storage tiers of 16/64/128. When I first say this during the original iPhone 6 / 6 Plus introduction, [I wrote][AppleWatchBlog]:
+
+> I like that the middle tier is now 64GB, but dislike that the bottom one remained at 16GB. It strikes me as
+> unfair, although I understand the reasoning to try to drive customers to a more expensive device.
+
+I was able to now pinpoint why I dislike this. The following screenshot is taken from Apple Store, when you choose an iPad mini 2 and can see the offered data plans:
+
+{% img center /downloads/images/2014-10-23/ipad-wireless-pricing.png 471 541 iPad Wireless Pricing %}
+
+Each carrier has a different pricing structure, but the intent is clear: drag you away from the cheapest plan. AT&T is the more obvious one: the jump from 250MB to 3GB is huge. Sprint is similar (although it's first plan is way better than AT&T's): the first jump gives you 3x the data, while the second only doubles it.
+
+My feel with iOS storage bumps is that Apple is applying a similar strategy to try to drive you to the second tier. It's not _unfair_, as I qualified it. But it's something I expect from cellular carriers, not from Apple.
+
+[AppleWatchBlog]: http://pablin.org/2014/09/11/apple-watch-event-thoughts/
+[^WhyIlogical]: It never made much sense that the additional 16GB had the same USD 100 price that the additional 32 or 64GB for succesive bumps.
