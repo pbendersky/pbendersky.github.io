@@ -1,3 +1,22 @@
+PATH
+  remote: /Users/Pablo/Projects/openSource/genesis-theme
+  specs:
+    octopress-genesis-theme (0.0.10)
+      jekyll (>= 2.0)
+      octopress-assign-tag
+      octopress-autoprefixer
+      octopress-comment-tag
+      octopress-date-format
+      octopress-filter-tag
+      octopress-ink (~> 1.0)
+      octopress-linkblog
+      octopress-littlefoot
+      octopress-paginate
+      octopress-quote-tag
+      octopress-social
+      octopress-wrap-tag
+      sass (~> 3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -95,20 +114,6 @@ GEM
       octopress-hooks (~> 2.0)
       rubypants-unicode
       titlecase
-    octopress-genesis-theme (0.0.10)
-      octopress-assign-tag
-      octopress-autoprefixer
-      octopress-comment-tag
-      octopress-date-format
-      octopress-filter-tag
-      octopress-ink (~> 1.0)
-      octopress-linkblog
-      octopress-littlefoot
-      octopress-paginate
-      octopress-quote-tag
-      octopress-social
-      octopress-wrap-tag
-      sass (~> 3.4)
     octopress-hooks (2.6.1)
       jekyll (>= 2.0)
     octopress-image-tag (1.1.0)
@@ -192,7 +197,7 @@ DEPENDENCIES
   octopress-feeds
   octopress-filter-tag
   octopress-filters
-  octopress-genesis-theme
+  octopress-genesis-theme!
   octopress-image-tag
   octopress-linkblog
   octopress-quote-tag

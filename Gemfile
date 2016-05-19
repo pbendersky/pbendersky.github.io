@@ -15,6 +15,6 @@ group :jekyll_plugins do
   gem 'octopress-filter-tag'
   gem 'octopress-filters'
   gem 'octopress-comment-tag'
-  gem 'octopress-genesis-theme'
+  gem 'octopress-genesis-theme', path: '/Users/Pablo/Projects/openSource/genesis-theme'
   gem 'jekyll-sitemap'
 end
