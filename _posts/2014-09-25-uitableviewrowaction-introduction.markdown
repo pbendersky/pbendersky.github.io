@@ -55,7 +55,7 @@ As you can see you need to return an array of `UITableViewRowAction` objects. `U
 
 As you may have noticed it in the sample code above: in addition to `tableView:editActionsForRowAtIndexPath:` you need to override `tableView:commitEditingStyle:forRowAtIndexPath:`, even though you can leave it blank. If the method is not present, the actions won't show up on swipe[^DocumentEmptyMethods].
 
-In case you find it useful, I've left the sample project I used for this post a [GitHub repository](https://github.com/pbendersky/UITableViewRowActionSample).
+In case you find it useful, you can [download an interactive playground](/downloads/code/2014-09-25/UITableViewRowActionIntroduction.playground.zip) with this sample code.
 
 [^ButKeptMorePrivate]: Interestingly, in iOS 8, Apple is again testing more `UITableViewCell` actions, like swiping _across_ the entire row to trigger an action, or swipe from both sides to reveal different options. Additionally, it appears iOS 8 private API also allows you to customize the background colors. I'm looking forward to iOS 9 (or 8.1) making these API public.
 [^DocumentEmptyMethods]: As you can see in my sample code, this method has a comment indicating it's _intentionally_ blank. Any time you need an empty method implementation leave a comment, as these methods will be the first you (or other teammate) will target for removal when refactoring code.
