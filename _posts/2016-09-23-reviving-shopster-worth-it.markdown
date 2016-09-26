@@ -29,8 +29,8 @@ And finally, we got a ticket last week asking us to please, please, add support 
 When we launched Shopster, we neglected to include a sync feature. We figured it was not that important, but our users
 kept asking for it.
 
-By the time we had to make the call, the best choice was to roll our own syncing engine and incurr in a monthly cost, knowing almost for certain,
-that we might not be able to affort it in the long run.
+By the time we had to make the call, the best choice was to roll our own syncing engine and incur in a monthly cost, knowing almost for certain,
+that we might not be able to afford it in the long run.
 
 Fast forward a few years, and Apple shipped CloudKit and more recently CloudKit sharing, which would allow us to enable sharing of shopping lists at no monthly cost.
 
