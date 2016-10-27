@@ -4,8 +4,18 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I’m Pablo Bendersky, a software developer from Buenos Aires, Argentina.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+In 2002 I married my awesome wife, Karina.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+In 2004 I co-founded Quadion Technologies, a software development shop.
+
+On 2011 we became parents of twins, and it’s been an amazing ride ever since.
+
+My current interests, and the main driver for this blog, are general topics in software development, and iOS and Apple stuff in particular.
+
+You can contact me at:
+
+- **Quadion Technologies** http://www.quadiontech.com
+- **Twitter** @pbendersky
+- **Email** pablin ( at ) pablin (dot) org

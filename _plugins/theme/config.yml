@@ -4,6 +4,7 @@ title: "[pablin blog];"
 # Links for main navigation
 main_nav:
   - { url: '/', title: 'Posts' }
+  - { url: '/about', title: 'About' }
   - { url: '/archive/', title: 'Archive' }
   - { url: '/feed/', title: 'Subscribe' }
 
