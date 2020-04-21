@@ -1,5 +1,5 @@
 ---
-layout: theme:page
+layout: page
 title: "NSConf Argentina 2016 - Material"
 permalink: /nsconfarg16/
 ---

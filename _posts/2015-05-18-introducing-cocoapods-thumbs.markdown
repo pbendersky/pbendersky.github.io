@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Introducing CocoaPods thumbs"
 date: 2015-05-18 17:41:52 -0300
 comments: true

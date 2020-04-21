@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Praising Synology's Customer Support"
 date: 2014-02-20 06:52:51 -0300
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - Make It Build"
 date: 2016-09-23T17:52:19-03:00
 ---
@@ -7,7 +6,7 @@ I started [analyzing](http://pablin.org/2016/09/23/reviving-shopster-worth-it/) 
 
 So first step into the plan: clone the project's repo, and see what breaks.
 
-For starters, I did not follow my own [CocoaPods suggestion](http://pablin.org/2014/05/04/cocoapods-best-practices/)[^NoWonder], so the `Pods` folder is not part of the repository.
+For starters, I did not follow my own [CocoaPods suggestion]({% link _posts/2014-05-04-cocoapods-best-practices.markdown %})[^NoWonder], so the `Pods` folder is not part of the repository.
 
 Luckily, Shopster's Podfile is pretty short:
 

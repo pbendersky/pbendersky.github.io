@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Raw Thoughts on Apple's Spring Forward Event"
 date: 2015-03-10 18:05:25 -0300
 comments: true

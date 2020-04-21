@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Apple's Tick-Tock Strategy"
 date: 2013-05-06 22:39
 comments: true

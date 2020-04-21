@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "HomeKit Accessory Simulator for iOS 10"
 date: 2017-02-15T16:00:07-03:00
 ---

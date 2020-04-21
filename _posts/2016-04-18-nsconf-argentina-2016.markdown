@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "NSConf Argentina 2016"
 date: 2016-04-18T09:39:32-03:00
 external_url: http://nsconfarg.com

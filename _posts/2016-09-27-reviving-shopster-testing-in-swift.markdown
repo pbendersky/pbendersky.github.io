@@ -1,9 +1,8 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - Testing in Swift"
 date: 2016-09-27T16:55:02-03:00
 ---
-I'm trying to revive Shopster, an app we launched 2013, and I'm writing througout the process. If this is the first post you see, you can start [here](http://pablin.org/2016/09/23/reviving-shopster-worth-it/).
+I'm trying to revive Shopster, an app we launched 2013, and I'm writing througout the process. If this is the first post you see, you can start [here]({% link _posts/2016-09-23-reviving-shopster-worth-it.markdown %}).
 
 ---
 

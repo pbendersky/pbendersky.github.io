@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "iOS 7: A World of Difference"
 date: 2013-07-13 08:38
 comments: true

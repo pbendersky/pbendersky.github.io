@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "An idea: CloudKit for Family Sharing"
 date: 2014-10-22 09:36:23 -0300
 comments: true

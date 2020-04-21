@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: CocoaPods for internal libraries
 date: 2013-05-18 13:55
 comments: true
@@ -53,6 +52,7 @@ To share these specs with your teammates, they only need to add the new specs re
 running `pod repo add MySpecs git@git.example.com:MySpecs`.
 
 ### Conclusions
+
 CocoaPods is an amazing tool. For [some companies](http://www.quadiontech.com) dealing with internal
 reusable libraries is a daily business. Using CocoaPods as depicted has several benefits:
 
@@ -60,6 +60,8 @@ reusable libraries is a daily business. Using CocoaPods as depicted has several 
 - Your projects use a single way of dependency management, both for open source libraries and internal
 ones.
 - It's straightforward to share an internal specs repository with teammates.
+
+---
 
 [CocoaPods]: http://cocoapods.org
 [Podspec]: https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "What if the rumored Apple Home Automation is the next Apple TV?"
 date: 2014-05-26 20:33:59 -0300
 comments: true

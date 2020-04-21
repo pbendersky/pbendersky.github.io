@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Using PostgreSQL hstore with Rails 4"
 date: 2013-10-16 14:43
 comments: true

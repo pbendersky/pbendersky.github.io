@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Catching up with WWDC 2013"
 date: 2013-06-21 14:42
 comments: true

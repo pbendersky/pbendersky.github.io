@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Why a cheaper iPhone makes sense to me"
 date: 2013-08-04 15:14
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Add MIME types to GroundControl remote config"
 date: 2013-07-04 14:11
 comments: true
@@ -19,16 +18,17 @@ was hosted in Dropbox, and the returned MIME type was `plain/text` instead of th
 Since GroundControl is based on AFNetworking, this is easy to fix. Just add the MIME Type to 
 `AFPropertyListRequestOperation` as follows:
 
-``` objective-c Adding MIME Types to GroundControl
+{%highlight objective_c %}
 NSURL *url = /* your URL */;
 [AFPropertyListRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/plain"]];
-[[NSUserDefaults standardUserDefaults] registerDefaultsWithURL:url
-                                                       success:^(NSDictionary *defaults) {
-                                                       }
-                                                       failure:^(NSError *error) {
-                                                       }
+[[NSUserDefaults standardUserDefaults]
+    registerDefaultsWithURL:url
+                    success:^(NSDictionary *defaults) {
+                                                      }
+                    failure:^(NSError *error) {
+                                              }
  ];
-```
+{% endhighlight %}
 
 
 [GroundControl]: https://github.com/mattt/GroundControl

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - Baseline Metrics"
 date: 2016-09-26T13:25:42-03:00
 ---

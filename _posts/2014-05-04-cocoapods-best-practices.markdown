@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "CocoaPods Best Practices"
 date: 2014-05-04 15:11:41 -0300
 comments: true

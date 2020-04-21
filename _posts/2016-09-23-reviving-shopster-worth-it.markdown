@@ -1,10 +1,9 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - Worth it?"
 date: 2016-09-23T16:23:53-03:00
 ---
 We launched [Shopster] in 2013. It was the last app we developed we published under [Quadion]'s name.
-Even though it had great launch coverage, [it tanked](http://pablin.org/2013/06/06/the-ios-appstore-in-2013/).
+Even though it had great launch coverage, [it tanked]({% link _posts/2013-06-06-the-ios-appstore-in-2013.markdown %}).
 
 For 2016 standards, the app has piled up on technical debt. It currently:
 

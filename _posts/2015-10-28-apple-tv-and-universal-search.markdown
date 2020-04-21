@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Apple TV and Universal Search"
 date: 2015-10-28T14:34:10-03:00
 external_url: http://www.buzzfeed.com/johnpaczkowski/tim-cook-talks-apple-tv

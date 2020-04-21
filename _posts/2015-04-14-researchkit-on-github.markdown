@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "ResearchKit on GitHub"
 date: 2015-04-14 14:33:09 -0300
 comments: true

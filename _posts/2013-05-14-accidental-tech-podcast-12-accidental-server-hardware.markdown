@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Accidental Tech Podcast: 12: Accidental Server Hardware"
 date: 2013-05-14 23:04
 comments: true

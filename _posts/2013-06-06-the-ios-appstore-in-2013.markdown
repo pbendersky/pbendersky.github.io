@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "The iOS AppStore in 2013"
 date: 2013-06-06 9:47
 comments: true
@@ -12,7 +11,9 @@ On March 28th 2013, after several months of development we launched Shopster, ou
 On this post I'd like to cover what we did in anticipation to the launch, how it correlated to sales, and a glimpse n our future plans. I think it paints a good picture of the state of the iOS AppStore in 2013.
 
 ## About Shopster
-{% img right /downloads/images/2013-06-06/mzl.dllofszd.png 320 568 %}
+
+![Shopster](/assets/images/2013-06-06/mzl.dllofszd.png)
+
 In case you don't know it, here's what Shopster looks like.
 It's a simple groceries list app with a twist: it automatically learns the location where you check an item as purchased, so it can later use that information to trigger a location geo-fenced reminder.
 
@@ -31,20 +32,20 @@ money had begun, or so we thought until the next morning.
 ## First week of sales
 I can't say the first day sales were a disappointment, as I was not sure what to expect, since [our][NineGaps] [previous][RuneTrails] [apps][AlienCab] did not have the coverage Shopster had. We were surprised to see the app had only sold about 200 units. Here's a graphic of our sales (in units) throughout the first week in the AppStore:
 
-{% img center /downloads/images/2013-06-06/first_week_sales.png Shopster - First week of sales %}
+![First week of sales](/assets/images/2013-06-06/first_week_sales.png)
 
 What's interesting to me here is to see how these sales correlate with the AppStore rankings. Rankings are
 believed to be the best available marketing tool, as they give your app great visibility, but the
 calculations Apple use to generate those are unknown.
 
-{% img center /downloads/images/2013-06-06/shopsterFirstWeekRank.png Shopster - First week ranking %}
+![First week ranking](/assets/images/2013-06-06/shopsterFirstWeekRank.png)
 
 As you can see, in our first week averaging 100 sales a day, our app ranked consistently in the top 100
 productivity apps.
 
 Interesntingly[^JuryAppStorePricing], the Top Grossing rank paints a different story:
 
-{% img center /downloads/images/2013-06-06/shopsterFirstWeekTopGrossing.png Shopster - First week top grossing rank %}
+![Shopster - First week top grossing rank](/assets/images/2013-06-06/shopsterFirstWeekTopGrossing.png)
 
 As you can see, Shopster only ranked as high as 75th and remained in the Top 300 (contrast that with being
 in the Top 100 for Top Paid).
@@ -57,7 +58,7 @@ Dring the first month of life of the app, we continued too gain awareness of the
 
 Here's a summary of the sales during the first four weeks:
 
-{% img center /downloads/images/2013-06-06/first_month_sales.png Shopster - First month of sales %}
+![Shopster - First month of sales](/assets/images/2013-06-06/first_month_sales.png)
 
 As you can see, things did not get better, and our app averaged 41 sales per day.
 

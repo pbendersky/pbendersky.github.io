@@ -1,10 +1,9 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - In Review"
 date: 2016-10-30T16:42:06-03:00
 ---
 
-I'm trying to revive Shopster, an app we launched 2013, and I'm writing througout the process. If this is the first post you see, you can start [here](http://pablin.org/2016/09/23/reviving-shopster-worth-it/).
+I'm trying to revive Shopster, an app we launched 2013, and I'm writing througout the process. If this is the first post you see, you can start [here]({% link _posts/2016-09-23-reviving-shopster-worth-it.markdown %}).
 
 ---
 

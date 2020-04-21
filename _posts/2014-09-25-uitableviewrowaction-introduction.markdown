@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "UITableViewRowAction Introduction"
 date: 2014-09-25 11:06:38 -0300
 comments: true
@@ -20,7 +19,7 @@ The method retuns an _array_ of actions. The order is of course important: the f
 
 A sample implementation follows:
 
-```swift
+{% highlight swift %}
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
 
         let deleteClosure = { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
@@ -41,11 +40,11 @@ A sample implementation follows:
         
         // Intentionally blank. Required to use UITableViewRowActions
     }
-```
+{% endhighlight %}
 
 This is how it looks when you swipe:
 
-{% img center /downloads/images/2014-09-25/UITableRowActionSample@2x.png 320 129 UITableViewRowAction Sample %}
+{% include image.html url="/assets/images/2014-09-25/UITableRowActionSample@2x.png" width="320" height="129" description="UITableViewRowAction Sample" %}
 
 As you can see you need to return an array of `UITableViewRowAction` objects. `UITableViewRowAction.init` receives three parameters:
 
@@ -55,7 +54,7 @@ As you can see you need to return an array of `UITableViewRowAction` objects. `U
 
 As you may have noticed it in the sample code above: in addition to `tableView:editActionsForRowAtIndexPath:` you need to override `tableView:commitEditingStyle:forRowAtIndexPath:`, even though you can leave it blank. If the method is not present, the actions won't show up on swipe[^DocumentEmptyMethods].
 
-In case you find it useful, you can [download an interactive playground](/downloads/code/2014-09-25/UITableViewRowActionIntroduction.playground.zip) with this sample code.
+In case you find it useful, you can [download an interactive playground](/assets/code/2014-09-25/UITableViewRowActionIntroduction.playground.zip) with this sample code.
 
 [^ButKeptMorePrivate]: Interestingly, in iOS 8, Apple is again testing more `UITableViewCell` actions, like swiping _across_ the entire row to trigger an action, or swipe from both sides to reveal different options. Additionally, it appears iOS 8 private API also allows you to customize the background colors. I'm looking forward to iOS 9 (or 8.1) making these API public.
 [^DocumentEmptyMethods]: As you can see in my sample code, this method has a comment indicating it's _intentionally_ blank. Any time you need an empty method implementation leave a comment, as these methods will be the first you (or other teammate) will target for removal when refactoring code.

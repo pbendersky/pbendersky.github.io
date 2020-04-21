@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Reviving Shopster - Deprecations and iOS 10"
 date: 2016-09-26T15:10:51-03:00
 ---

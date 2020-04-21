@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Overthinknig the Next Apple TV"
 date: 2015-08-25T09:14:03-03:00
 categories: [Apple, Speculation]

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Interfacing with a UIWebView from a UIViewController"
 date: 2013-08-31 14:59
 comments: true
@@ -32,7 +31,7 @@ So the trick to bridge interactions in a `UIWebView` and Objective-C code is as 
 ## Putting it all together
 Let's put both things together with a small sample. Here's how the app looks:
 
-{% img /downloads/images/2013-08-31/UIWebViewSample.png 320 568 %}
+![](/assets/images/2013-08-31/UIWebViewSample.png)
 
 It's a `UIWebView` with a `UIToolBar` that has two buttons, to increase and decrease the font size (similar to several online publications would do). The app works as follows:
 
@@ -41,11 +40,117 @@ It's a `UIWebView` with a `UIToolBar` that has two buttons, to increase and decr
 
 Here's the HTML (with embedded Javascript[^ResizeSource]) that the `UIWebView` loads:
 
-{% include_code 2013-08-31/content.html HTML and JS code %}
+{% highlight html %}
+<html>
+    <head>
+        <script language="javascript">
+            function resizeText(multiplier) {
+                if (document.body.style.fontSize == "") {
+                    document.body.style.fontSize = "1.0em";
+                }
+                document.body.style.fontSize =
+                parseFloat(document.body.style.fontSize) +
+                (multiplier * 0.2) + "em";
+            }
+            
+            function touchStart(event) {
+                sX = event.touches[0].clientX;
+                sY = event.touches[0].clientY;
+            }
+            
+            function touchEnd(event) {
+                var parentNode = event.target.parentNode
+                if ( parentNode != null && parentNode.nodeName.toLowerCase() == "a" )
+                    return;
+                
+                if (event.changedTouches[0].clientX == sX &&
+                    event.changedTouches[0].clientY == sY) {
+                    
+                    window.location = "nativeAction://hideShow";
+                }
+            }
+            
+            document.addEventListener("touchstart", touchStart, false);
+            document.addEventListener("touchend", touchEnd, false);
+
+            </script>
+    </head>
+    <body>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Proin at justo malesuada, accumsan justo non, dapibus ante.
+       Maecenas luctus at magna nec convallis. Suspendisse ac
+       purus molestie mauris porttitor viverra sed a risus. Aliquam
+       pellentesque gravida ante, eu mattis lectus.
+    </body>
+</html>
+{% endhighlight %}
 
 And here's the `UIViewController` that is also the `UIWebViewDelegate`:
 
-{% include_code 2013-08-31/QDNViewController.m HTML and JS code %}
+{% highlight objective_c %}
+//
+//  QDNViewController.m
+//  WebViewSample
+//
+//  Created by Pablo Bendersky on 8/31/13.
+//  Copyright (c) 2013 Pablo Bendersky. All rights reserved.
+//
+
+#import "QDNViewController.h"
+
+@interface QDNViewController ()
+
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) IBOutlet UIToolbar *toolBar;
+
+- (IBAction)decreaseTextSize:(id)sender;
+- (IBAction)increaseTextSize:(id)sender;
+- (void)resizeTextAdding:(NSInteger)textSizeIncrement;
+
+@end
+
+@implementation QDNViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSURL *localFileURL = [[NSBundle mainBundle] URLForResource:@"content"
+                                                  withExtension:@"html"];
+    [self.webView loadHTMLString:
+     [NSString stringWithContentsOfURL:localFileURL
+                              encoding:NSUTF8StringEncoding
+                                 error:NULL]
+                         baseURL:nil];
+}
+
+- (IBAction)decreaseTextSize:(id)sender {
+    [self resizeTextAdding:-1];
+}
+
+- (IBAction)increaseTextSize:(id)sender {
+    [self resizeTextAdding:1];
+}
+
+- (void)resizeTextAdding:(NSInteger)textSizeIncrement {
+    NSString *jsString = [NSString stringWithFormat:@"resizeText(%d)", textSizeIncrement];
+
+    [self.webView stringByEvaluatingJavaScriptFromString:jsString];
+}
+
+#pragma mark - UIWebViewDelegate methods
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType {
+    
+    if ([request.URL.scheme caseInsensitiveCompare:@"nativeAction"] == NSOrderedSame) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.toolBar.alpha = (1 - self.toolBar.alpha);
+        }];
+    }
+
+    return YES;
+}
+
+@end
+{% endhighlight %}
 
 You can grab the entire code from [this Github repository](https://github.com/pbendersky/pablinorg-UIWebViewSample).
 

@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "BetterTouchTool vs MagicPrefs"
 date: 2015-10-19T11:51:41-03:00
 categories: [Apple, Speculation]

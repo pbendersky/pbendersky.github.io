@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Using nscurl With Self-Signed Certificates"
 date: 2015-10-06T18:21:22-03:00
 categories: [Development, iOS]

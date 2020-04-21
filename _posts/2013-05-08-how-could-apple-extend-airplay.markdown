@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "How could Apple extend AirPlay"
 date: 2013-05-08 22:41
 comments: true

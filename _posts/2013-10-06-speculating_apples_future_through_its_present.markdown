@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Speculating Apple's future through its present"
 date: 2013-10-06 14:47
 comments: true

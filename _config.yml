@@ -1,25 +1,61 @@
-# Site settings
-title: pablin.org
-name: pablin.org
-author: Pablo Bendersky
-email: pablin@pablin.org
-description: > # this means to ignore newlines until "baseurl:"
-  Pablo Bendersky's blog. I'm a co-founder and developer at Quadion Technologies. I write about
-  developing, Apple stuff, and anything that seems interesting to me.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://pablin.org" # the base hostname & protocol for your site
-twitter_username: pbendersky
-github_username:  pbendersky
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-excerpt_separator: <!-- read more -->
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Pablin
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Pablo Bendersky's blog. I'm a co-founder and developer at Quadion Technologies.
+  I write  about software development, some Apple stuff, and anything that seems 
+  interesting to me.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://pablin.org" # the base hostname & protocol for your site, e.g. http://example.com
+
+minima:
+  social_links:
+   twitter: pbendersky
+   github: pbendersky
+
+show_excerpts: true
+excerpt_separator: <!-- more -->
 
 permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
 
-gems:
-  - octopress-genesis-theme
-  - octopress-codefence
-  - octopress-render-code
-  - octopress-feeds
+header_pages:
+  - about.md
+
+paginate: 5
+paginate_path: "/page/:num/"
+
+feed:
+  path: /feed/
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

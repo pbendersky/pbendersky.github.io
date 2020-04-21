@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Problems with Core Data Migration Manager and journal_mode WAL"
 date: 2013-05-24 10:29
 comments: true
@@ -16,7 +15,31 @@ to offer a workaround in case someone else runs into this issue in the future.
 ## The setup
 Here's the setup of the Core Data stack in our app:
 
-{% include_code 2013-05-24/CoreDataSetup.m Core Data stack setup %}
+{% highlight objective_c %}
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CDMigration.sqlite"];
+    
+    NSError *error = nil;
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption:@YES,
+                              NSInferMappingModelAutomaticallyOption:@YES,
+                              NSSQLitePragmasOption: @{@"journal_mode": @"WAL"}
+                              };
+    
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }    
+    
+    return _persistentStoreCoordinator;
+}
+{% endhighlight %}
 
 It's nothing fancy: the stock Core Data initialization you get with the Xcode template, plus the two options
 that are commented out (`NSMigratePersistentStoresAutomaticallyOption` and
@@ -48,7 +71,55 @@ As I'm not sure I want WAL enabled, I decided to keep the setting and implement 
 
 Here's how the code looks:
 
-{% include_code 2013-05-24/CoreDataWorkaroundSetup.m Core Data workaround setup %}
+{% highlight objective_c %}
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CDMigration.sqlite"];
+    
+    NSError *error = nil;
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption:@YES,
+                              NSInferMappingModelAutomaticallyOption:@YES,
+                              NSSQLitePragmasOption: @{@"journal_mode": @"WAL"}
+                              };
+    
+    // Check if we need a migration
+    NSDictionary *sourceMetadata = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:storeURL error:&error];
+    NSManagedObjectModel *destinationModel = [_persistentStoreCoordinator managedObjectModel];
+    BOOL isModelCompatible = (sourceMetadata == nil) || [destinationModel isConfiguration:nil compatibleWithStoreMetadata:sourceMetadata];
+    if (! isModelCompatible) {
+        // We need a migration, so we set the journal_mode to DELETE
+        options = @{NSMigratePersistentStoresAutomaticallyOption:@YES,
+                    NSInferMappingModelAutomaticallyOption:@YES,
+                    NSSQLitePragmasOption: @{@"journal_mode": @"DELETE"}
+                    };
+    }
+
+    NSPersistentStore *persistentStore = [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error];
+    if (! persistentStore) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }    
+    
+    // Reinstate the WAL journal_mode
+    if (! isModelCompatible) {
+        [_persistentStoreCoordinator removePersistentStore:persistentStore error:NULL];
+        options = @{NSMigratePersistentStoresAutomaticallyOption:@YES,
+                    NSInferMappingModelAutomaticallyOption:@YES,
+                    NSSQLitePragmasOption: @{@"journal_mode": @"WAL"}
+                    };
+        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error];
+    }
+
+    
+    return _persistentStoreCoordinator;
+}
+{% endhighlight %}
 
 ## Radar or GTFO[^RadarOrGTFO]
 I've filed a [bug report to Apple on this issue][OpenRadarLink]. If you run into this as well, feel free

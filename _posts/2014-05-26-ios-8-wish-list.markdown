@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "iOS 8 Wish List"
 date: 2014-05-26 19:38:20 -0300
 comments: true

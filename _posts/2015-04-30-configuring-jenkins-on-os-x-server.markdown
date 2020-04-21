@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Configuring Jenkins on OS X Server"
 date: 2015-04-30 14:51:04 -0300
 comments: true
@@ -31,16 +30,15 @@ On the Mac running OS X Server open the Server app. It will ask you to choose a 
 
 Once in, choose Websites on the left menu. On the top-right you have a button to start Apache. On the bottom, there's a list of Websites. Use the plus button to add a new one for Jenkins.
 
-{% img center /downloads/images/2015-04-30/screen1.png Server.app - Main Window %}
-{{ screenshot 1 }}
+{% include image.html url="/assets/images/2015-04-30/screen1.png" description="Server.app - Main Window" %}
 
 When editing the Virtual Host, choose a Domain Name such as jenkins.example.com.
 
-{% img center /downloads/images/2015-04-30/screen2.png Server.app - Websites Section %}
+{% include image.html url="/assets/images/2015-04-30/screen2.png" description="Server.app - Websites Section" %}
 
 If you go to Edit Advanced Settings... you'll see the following screen:
 
-{% img center /downloads/images/2015-04-30/screen3.png Server.app - Websites' Edit Advanced Settings %}
+{% include image.html url="/assets/images/2015-04-30/screen3.png" description="Server.app - Websites' Edit Advanced Settings" %}
 
 except that you won't have the webapp called "Jenkins using ajp13". Let's go ahead and create it.
 
@@ -56,7 +54,7 @@ Webapps are defined with plist files stored in `/Library/Server/Web/Config/apach
 
 The `plist` we[^we] created for Jenkins looks like this:
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-7"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -81,7 +79,7 @@ The `plist` we[^we] created for Jenkins looks like this:
 	</array>
 </dict>
 </plist>
-```
+{% endhighlight %}
 
 You can name this plist whatever you want. The naming convention is reverse URLs. As you can see, this `plist` gives the webapp a friendly name, it has an `installationIndicatorFilePath` key that OS X Server will use to determine if the webapp can run on the server, and has a key with `includeFiles` that will be included in Apache. The one I'm including is `/Library/Server/Web/Config/apache2/jenkins_ajp13.conf` and its contents are as follows:
 
@@ -102,7 +100,7 @@ Remember I told you to copy the `launchd` configuration file instead of symlinki
 
 Here's how my modified `homebrew.mxcl.jenkins.plist` file looks:
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -122,7 +120,7 @@ Here's how my modified `homebrew.mxcl.jenkins.plist` file looks:
     <true/>
   </dict>
 </plist>
-```
+{% endhighlight %}
 
 ## Starting Jenkins
 

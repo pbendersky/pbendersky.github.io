@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "iOS 8 - More than I expected"
 date: 2014-07-30 22:35:54 -0300
 comments: true

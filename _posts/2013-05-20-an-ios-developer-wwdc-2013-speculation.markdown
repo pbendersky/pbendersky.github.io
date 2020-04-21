@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "An iOS Developer WWDC 2013 Speculation"
 date: 2013-05-20 14:36
 comments: true

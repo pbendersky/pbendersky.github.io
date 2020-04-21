@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "On Google Play removing Argentinean apps"
 date: 2013-05-25 23:25
 comments: true

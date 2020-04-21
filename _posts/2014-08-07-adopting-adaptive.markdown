@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Adopting Adaptive"
 date: 2014-08-07 14:51:40 -0300
 comments: true

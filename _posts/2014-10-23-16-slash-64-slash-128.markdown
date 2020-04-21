@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "16/64/128"
 date: 2014-10-23 10:23:59 -0300
 comments: true
@@ -16,7 +15,7 @@ This year, this changed for the worse. Apple is now offering all their new devic
 
 I was able to now pinpoint why I dislike this. The following screenshot is taken from Apple Store, when you choose an iPad mini 2 and can see the offered data plans:
 
-{% img center /downloads/images/2014-10-23/ipad-wireless-pricing.png 471 541 iPad Wireless Pricing %}
+{% include image.html url="/assets/images/2014-10-23/ipad-wireless-pricing.png" width="471" height="541" description="iPad Wireless Pricing" %}
 
 Each carrier has a different pricing structure, but the intent is clear: drag you away from the cheapest plan. AT&T is the more obvious one: the jump from 250MB to 3GB is huge. Sprint is similar (although it's first plan is way better than AT&T's): the first jump gives you 3x the data, while the second only doubles it.
 

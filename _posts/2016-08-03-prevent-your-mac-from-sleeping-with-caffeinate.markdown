@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Prevent Your Mac From Sleeping With Caffeinate"
 date: 2016-08-03T18:07:37-03:00
 categories: macOS, Terminal

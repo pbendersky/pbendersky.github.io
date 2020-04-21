@@ -1,5 +1,4 @@
 ---
-layout: theme:post
 title: "Apple Watch Event Thoughts"
 date: 2014-09-11 00:54:24 -0300
 comments: true
