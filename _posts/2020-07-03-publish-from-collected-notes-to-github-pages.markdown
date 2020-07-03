@@ -2,8 +2,6 @@
 title: Publish from Collected Notes to GitHub Pages
 date: 2020-07-03T15:13:38+00:00
 ---
-# Publish from Collected Notes to GitHub Pages
-
 My blog is a statically generated Jekyll site hosted on GitHub pages.
 
 While I do use Collected Notes to post some short things, I haven’t migrated my blog there since it will break all my past permalinks. However, I do love the simplicity to both write and publish quickly from any device that Collected Notes gives me.
