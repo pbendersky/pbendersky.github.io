@@ -32,7 +32,7 @@ jobs:
         title: ${title}
         date: `date --iso-8601=seconds`
         ---
-        `jq -r '.body' note.json`
+        `jq -r '.body' note.json | sed -e '/^\# .*/d'`
         EOF
 
     - name: Commit post
