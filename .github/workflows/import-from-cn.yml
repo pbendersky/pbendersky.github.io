@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Import From CN
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  repository_dispatch:
+    types: [ opened ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    
+    - name: import-from-cn
+      run: |
+        curl --location ${{ github.event.client_payload.url }}.json > note.json
+        date_prefix=`date +%Y-%m-%d`
+        markdown_name=${date_prefix}-`jq -r '.path' note.json`.markdown
+        title=`jq -r '.title' note.json`
+        post_path=$GITHUB_WORKSPACE/_posts/${markdown_name}
+        cat <<EOF > ${post_path}  
+        ---
+        title: ${title}
+        date: `date --iso-8601=seconds`
+        ---
+        `jq -r '.body' note.json`
+        EOF
+
+    - name: Commit post
+      uses: stefanzweifel/git-auto-commit-action@v4.3.0
+      with:
+        # Directory to create commit in
+        commit_message: Imported ${{ github.event.client_payload.url }}
